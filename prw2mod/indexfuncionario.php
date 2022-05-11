@@ -15,18 +15,18 @@
 
     <h1>FUNCIONÁRIO</h1>
 
-    <form action='controle.php' method='GET'>
+    <form action='controlefuncionario.php' method='GET'>
         <p><input type='number' name='codigo' placeholder="Código"></p>
         <p><input type='text' name='nome' placeholder="Nome"></p>
         <p><input type='text' name='cargo' placeholder="Cargo"></p>
-        <p><input type='submit' name='botao' value='Cadastrar'></p>
-        <p><input type='submit' name='botao' value='Atualizar'></p>
-        <p><input type='submit' name='botao' value='Deletar'></p>
+        <p><input type='submit' name='botao' value='cadastrar'></p>
+        <p><input type='submit' name='botao' value='atualizar'></p>
+        <p><input type='submit' name='botao' value='deletar'></p>
     </form>
 
-    <form action='controle.php' method='GET'>
+    <form action='controlefuncionario.php' method='GET'>
         <p><input type='number' name='codigo' placeholder="Código"></p>
-        <p><input type='submit' name='botao' value='Consultar'></p>
+        <p><input type='submit' name='botao' value='consultar'></p>
     </form>
 
     <form action='index.php'>

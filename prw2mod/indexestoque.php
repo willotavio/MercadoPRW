@@ -20,14 +20,14 @@
         <p><input type='text' name='produto' placeholder="Produto"></p>
         <p><input type='text' name='quantidade' placeholder="Quantidade"></p>
         <p><input type='text' name='valor' placeholder="Valor"></p>
-        <p><input type='submit' name='botao' value='Cadastrar'></p>
-        <p><input type='submit' name='botao' value='Atualizar'></p>
-        <p><input type='submit' name='botao' value='Deletar'></p>
+        <p><input type='submit' name='botao' value='cadastrar'></p>
+        <p><input type='submit' name='botao' value='atualizar'></p>
+        <p><input type='submit' name='botao' value='deletar'></p>
     </form>
 
     <form action='controleestoque.php' method='GET'>
         <p><input type='number' name='codigo' placeholder="Código"></p>
-        <p><input type='submit' name='botao' value='Consultar'></p>
+        <p><input type='submit' name='botao' value='consultar'></p>
     </form>
 
     <form action='index.php'>
