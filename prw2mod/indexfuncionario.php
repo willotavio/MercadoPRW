@@ -13,6 +13,10 @@
 </head>
 <body>
 
+    <div>
+
+<div class=caixa>
+
     <h1>FUNCIONÁRIO</h1>
 
     <form action='controlefuncionario.php' method='GET'>
@@ -32,6 +36,10 @@
     <form action='index.php'>
         <p><input type='submit' value="Voltar"></p>
     </form>
+
+</div>
+
+    </div>
 
 </body>
 </html>
