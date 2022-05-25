@@ -21,10 +21,18 @@
     }else if($botao=='Consultar'){
         $estoDao->consultarEstoque();
         foreach($estoDao->consultarEstoque() as $res){
-            echo $res['codigo_estoque']."<br>";
-            echo $res['produto']."<br>";
-            echo $res['quantidade']."<br>";
-            echo $res['valor_compra']."<br><br>";
+            
+            ?>
+            <form action='controleestoque.php' method='GET'>
+            <p><?php echo $res['codigo_estoque'] ?></p>
+            <p><input type='text' value='<?php echo $res['produto'] ?>'></p>
+            <p><input type='text' value='<?php echo $res['quantidade'] ?>'></p>
+            <p><input type='text' value='<?php echo $res['valor_compra'] ?>'></p>
+            <p><input type='submit' name='botao' value='Atualizar'></p>
+            <p><input type='submit' name='botao' value='Deletar'></p>
+            </form>
+        <?php
+
           }
         }else if($botao=='Atualizar'){
             $estoDao->atualizarEstoque($esto);

@@ -22,10 +22,16 @@
         $vendasDao->consultarVendas();
         foreach($vendasDao->consultarVendas() as $res){
            
-            echo $res['codigo_venda']."<br>";
-            echo $res['produto_venda']."<br>";
-            echo $res['quantidade_venda']."<br>";
-            echo $res['funcionario_venda']."<br><br>";
+           ?>
+            <form action='controlevendas.php' method='GET'>
+            <p><?php echo $res['codigo_vendas'] ?></p>
+            <p><input type='text' value='<?php echo $res['produto_venda'] ?>'></p>
+            <p><input type='text' value='<?php echo $res['quantidade_venda'] ?>'></p>
+            <p><input type='text' value='<?php echo $res['funcionario_compra'] ?>'></p>
+            <p><input type='submit' name='botao' value='Atualizar'></p>
+            <p><input type='submit' name='botao' value='Deletar'></p>
+            </form>
+        <?php
           
         }
         }else if($botao=='Atualizar'){

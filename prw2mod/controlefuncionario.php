@@ -19,10 +19,16 @@
     }else if($botao=='Consultar'){
         $funcDao->consultarFuncionario();
         foreach($funcDao->consultarFuncionario() as $res){
-            echo $res['codigo_funcionario']."<br>";
-            echo $res['nome']."<br>";
-            echo $res['cargo']."<br><br>";
-          }
+            ?>
+            <form action='controlefuncionario.php' method='GET'>
+            <p><?php echo $res['codigo_funcionario'] ?></p>
+            <p><input type='text' value='<?php echo $res['nome'] ?>'></p>
+            <p><input type='text' value='<?php echo $res['cargo'] ?>'></p>
+            <p><input type='submit' name='botao' value='Atualizar'></p>
+            <p><input type='submit' name='botao' value='Deletar'></p>
+            </form>
+        <?php
+        }
         }else if($botao=='Atualizar'){
             $funcDao->atualizarFuncionario($func);
         }else if($botao=='Deletar'){
