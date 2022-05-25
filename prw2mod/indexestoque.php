@@ -24,17 +24,17 @@
         <p><input type='text' name='produto' placeholder="Produto"></p>
         <p><input type='text' name='quantidade' placeholder="Quantidade"></p>
         <p><input type='text' name='valor' placeholder="Valor"></p>
-        <p><input type='submit' name='botao' value='cadastrar'></p>
-        <p><input type='submit' name='botao' value='atualizar'></p>
-        <p><input type='submit' name='botao' value='deletar'></p>
+        <p><input type='submit' name='botao' value='Cadastrar'></p>
+        <p><input type='submit' name='botao' value='Atualizar'></p>
+        <p><input type='submit' name='botao' value='Deletar'></p>
     </form>
 
     <form action='controleestoque.php' method='GET'>
-        <p><input type='submit' name='botao' value='consultar'></p>
+        <p><input type='submit' name='botao' value='Consultar'></p>
     </form>
 
     <form action='index.php'>
-        <p><input type='submit' value="Voltar"></p>
+        <br><p><input type='submit' value="Voltar"></p>
     </form>
 
 </div>

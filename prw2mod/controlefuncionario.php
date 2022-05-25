@@ -14,18 +14,18 @@
     include 'funcionarioDAO.php';
     $funcDao = new funcionarioDao();
 
-    if($botao=='cadastrar'){
+    if($botao=='Cadastrar'){
         $funcDao->cadastrarFuncionario($func);
-    }else if($botao=='consultar'){
+    }else if($botao=='Consultar'){
         $funcDao->consultarFuncionario();
         foreach($funcDao->consultarFuncionario() as $res){
             echo $res['codigo_funcionario']."<br>";
             echo $res['nome']."<br>";
             echo $res['cargo']."<br><br>";
           }
-        }else if($botao=='atualizar'){
+        }else if($botao=='Atualizar'){
             $funcDao->atualizarFuncionario($func);
-        }else if($botao=='deletar'){
+        }else if($botao=='Deletar'){
             $funcDao->deletarFuncionario($codigo);
         }
     

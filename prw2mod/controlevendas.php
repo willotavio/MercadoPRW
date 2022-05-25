@@ -16,9 +16,9 @@
     include 'vendasDAO.php';
     $vendasDao = new vendasDao();
 
-    if($botao=='cadastrar'){
+    if($botao=='Cadastrar'){
         $vendasDao->cadastrarvendas($ven);
-    }else if($botao=='consultar'){
+    }else if($botao=='Consultar'){
         $vendasDao->consultarVendas();
         foreach($vendasDao->consultarVendas() as $res){
            
@@ -28,9 +28,9 @@
             echo $res['funcionario_venda']."<br><br>";
           
         }
-        }else if($botao=='atualizar'){
+        }else if($botao=='Atualizar'){
             $vendasDao->atualizarVendas($ven);
-        }else if($botao=='deletar'){
+        }else if($botao=='Deletar'){
             $vendasDao->deletarVendas($codigo);
         }
     

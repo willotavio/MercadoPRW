@@ -16,9 +16,9 @@
     include 'estoqueDAO.php';
     $estoDao = new estoqueDao();
 
-    if($botao=='cadastrar'){
+    if($botao=='Cadastrar'){
         $estoDao->cadastrarEstoque($esto);
-    }else if($botao=='consultar'){
+    }else if($botao=='Consultar'){
         $estoDao->consultarEstoque();
         foreach($estoDao->consultarEstoque() as $res){
             echo $res['codigo_estoque']."<br>";
@@ -26,9 +26,9 @@
             echo $res['quantidade']."<br>";
             echo $res['valor_compra']."<br><br>";
           }
-        }else if($botao=='atualizar'){
+        }else if($botao=='Atualizar'){
             $estoDao->atualizarEstoque($esto);
-        }else if($botao=='deletar'){
+        }else if($botao=='Deletar'){
             $estoDao->deletarEstoque($codigo);
         }
     

@@ -23,17 +23,17 @@
         <p><input type='number' name='codigo' placeholder="Código"></p>
         <p><input type='text' name='nome' placeholder="Nome"></p>
         <p><input type='text' name='cargo' placeholder="Cargo"></p>
-        <p><input type='submit' name='botao' value='cadastrar'></p>
-        <p><input type='submit' name='botao' value='atualizar'></p>
-        <p><input type='submit' name='botao' value='deletar'></p>
+        <p><input type='submit' name='botao' value='Cadastrar'></p>
+        <p><input type='submit' name='botao' value='Atualizar'></p>
+        <p><input type='submit' name='botao' value='Deletar'></p>
     </form>
 
     <form action='controlefuncionario.php' method='GET'>
-        <p><input type='submit' name='botao' value='consultar'></p>
+        <p><input type='submit' name='botao' value='Consultar'></p>
     </form>
 
     <form action='index.php'>
-        <p><input type='submit' value="Voltar"></p>
+        <br><p><input type='submit' value="Voltar"></p>
     </form>
 
 </div>
