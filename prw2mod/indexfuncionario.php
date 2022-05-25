@@ -29,7 +29,6 @@
     </form>
 
     <form action='controlefuncionario.php' method='GET'>
-        <p><input type='number' name='codigo' placeholder="Código"></p>
         <p><input type='submit' name='botao' value='consultar'></p>
     </form>
 

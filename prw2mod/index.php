@@ -29,6 +29,11 @@
         <p><input type='submit' value="Estoque"></p>
     </form>
 
+    <form action='indexvendas.php'>
+        <p><input type='submit' value="Vendas"></p>
+    </form>
+
+
 </div>
 
 </div>

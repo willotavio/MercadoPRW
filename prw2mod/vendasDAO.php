@@ -1,49 +1,51 @@
 <?php
     include 'conexao.php';
 
-    class funcionarioDao{
-        public function cadastrarFuncionario(Funcionario $f){
-            $sql = 'insert into funcionario (codigo_funcionario, nome, cargo) values (?,?,?)';
+    class vendasDao{
+        public function cadastrarVendas(Vendas $v){
+            $sql = 'insert into vendas (codigo_venda, produto_venda, quantidade_venda, funcionario_venda) values (?,?,?,?)';
 
             $banco = new conexao();
             $con = $banco->getConexao();
             $resultado = $con->prepare($sql);
-            $resultado->bindValue(1, $f->getCodigo());
-            $resultado->bindValue(2, $f->getNome());
-            $resultado->bindValue(3, $f->getCargo());
+            $resultado->bindValue(1, $v->getCodigo());
+            $resultado->bindValue(2, $v->getProduto());
+            $resultado->bindValue(3, $v->getQuantidade());
+            $resultado->bindValue(4, $v->getFuncionario());
 
             $final = $resultado->execute();
 
             if($final){
                 echo "<script LANGUAGE= 'JavaScript'>
                 window.alert('Cadastrado com sucesso');
-                window.location.href='indexfuncionario.php';
+                window.location.href='indexvendas.php';
                 </script>";
             }
         }
 
-        public function atualizarFuncionario(Funcionario $f){
-            $sql = 'update funcionario set nome=?, cargo=? where codigo_funcionario=?';
+        public function atualizarVendas(Vendas $e){
+            $sql = 'update vendas set produto_venda=?, quantidade_venda=?, funcionario_venda=? where codigo_venda=?';
 
             $banco = new conexao();
             $con = $banco->getConexao();
             $resultado = $con->prepare($sql);
-            $resultado->bindValue(3, $f->getCodigo());
-            $resultado->bindValue(1, $f->getNome());
-            $resultado->bindValue(2, $f->getCargo());
+            $resultado->bindValue(4, $e->getCodigo());
+            $resultado->bindValue(1, $e->getProduto());
+            $resultado->bindValue(2, $e->getQuantidade());
+            $resultado->bindValue(3, $e->getFuncionario());
 
             $final = $resultado->execute();
 
             if($final){
                 echo "<script LANGUAGE= 'JavaScript'>
                 window.alert('Atualizado com sucesso');
-                window.location.href='indexfuncionario.php';
+                window.location.href='indexvendas.php';
                 </script>";
             }
         }
 
-        public function deletarFuncionario($codigo){
-            $sql = 'delete from funcionario where codigo_funcionario=?';
+        public function deletarVendas($codigo){
+            $sql = 'delete from vendas where codigo_vendas=?';
 
             $banco = new conexao();
             $con = $banco->getConexao();
@@ -55,13 +57,13 @@
             if($final){
                 echo "<script LANGUAGE= 'JavaScript'>
                 window.alert('Deletado com sucesso');
-                window.location.href='indexfuncionario.php';
+                window.location.href='indexvendas.php';
                 </script>";
             }
         }
 
-        public function consultarFuncionario(){
-            $sql = 'select * from funcionario';
+        public function consultarEstoque(){
+            $sql = 'select * from vendas';
 
             $banco = new conexao();
             $con = $banco->getConexao();
